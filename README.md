@@ -46,17 +46,31 @@ bash build.sh
 
 - All the built images were pushed to this repo: https://hub.docker.com/r/ngochieu642/pm2-arm32.
 - Available tags:
-    - `latest` \
-    Supported Architect
-        - linux/amd64 35.11 MB
-        - linux/arm/v6 34.31 MB
-        - linux/arm/v7 33.83 MB
-        - linux/arm64 35.18 MB
-    - `qemu` \
-    Supported Architect
-        - linux/arm 35.17 MB
-    - `travis` \
-    Supported Architect
-        - linux/arm 33.83 MB
+  - `latest` \
+    Supported Architect - linux/amd64 35.11 MB - linux/arm/v6 34.31 MB - linux/arm/v7 33.83 MB - linux/arm64 35.18 MB
+  - `qemu` \
+    Supported Architect - linux/arm 35.17 MB
+  - `travis` \
+    Supported Architect - linux/arm 33.83 MB
 
 ## TESTING
+
+### buildx
+
+```shell
+docker run --rm ngochieu642/test-pm2:latest
+```
+
+### qemu
+
+```shell
+docker run --rm ngochieu642/test-pm2:qemu
+```
+
+### travis
+
+```shell
+docker run --rm ngochieu642/test-pm2:travis
+```
+
+- If all the images was built correctly, the console should log Surprise and it's appearances every 2 seconds
