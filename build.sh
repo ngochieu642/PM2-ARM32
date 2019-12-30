@@ -1,0 +1,1 @@
+docker build -t ngochieu642/pm2-arm32:qemu . && docker push ngochieu642/pm2-arm32
